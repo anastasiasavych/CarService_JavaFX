@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservice_javafx.EmployeeRegistrationController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="231.0" style="-fx-background-color: #2F3B59;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/miniCar.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="120.0" layoutY="21.0" text="Menu" textFill="#e84b4b">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Line endX="180.0" layoutX="25.0" layoutY="65.0" stroke="#71bbff" />
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="20.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-creation.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="20.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-serviceSchedule.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="20.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-employee_blue.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="20.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-HR.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnExit" layoutX="136.0" layoutY="622.0" mnemonicParsing="false" onAction="#exitBtnOn" prefHeight="43.0" prefWidth="108.0" style="-fx-background-color: #D34646; -fx-background-radius: 10 0 0 10; -fx-border-color: #EB6868; -fx-border-width: 5; -fx-border-radius: 10 0 0 10;" text="Exit" textFill="#f3e1e1">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ee3e3e" height="712.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="12.0" x="235.0" />
+            <Button fx:id="btnCreateClient" layoutX="60.0" layoutY="122.0" mnemonicParsing="false" onAction="#createClientBtnOn" style="-fx-background-color: #2F3B59;" text="Creating a new client" textFill="#d9d9d9" />
+            <Button fx:id="btnServiceSchdl" layoutX="60.0" layoutY="172.0" mnemonicParsing="false" onAction="#serviceSchdlBtnOn" style="-fx-background-color: #2F3B59;" text="Service Schedule" textFill="#d9d9d9" />
+            <Button fx:id="btnAddEmployee" layoutX="60.0" layoutY="222.0" mnemonicParsing="false" onAction="#addEmployeeBtnOn" style="-fx-background-color: #2F3B59;" text="Add a new employee" textFill="#71bbff" />
+            <Button fx:id="btnListOfEmployee" layoutX="60.0" layoutY="272.0" mnemonicParsing="false" onAction="#listOfEmployeeBtnOn" style="-fx-background-color: #2F3B59;" text="List of employee" textFill="#d9d9d9" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D9D9D9;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane layoutY="29.0" prefHeight="657.0" prefWidth="748.0" style="-fx-background-color: #B2B7C2; -fx-background-radius: 0 25 0 0;">
+                    <children>
+                        <Label layoutX="203.0" layoutY="40.0" text="EMPLOYEE DATA" textFill="#68718a">
+                            <font>
+                                <Font name="Arial Bold" size="40.0" />
+                            </font>
+                        </Label>
+                        <AnchorPane layoutX="127.0" layoutY="100.0" prefHeight="475.0" prefWidth="492.0" style="-fx-background-color: #A0AAC3;">
+                            <children>
+                                <TextField fx:id="txtFirstName" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="58.0" prefHeight="37.0" prefWidth="190.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <TextField fx:id="txtLastName" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="128.0" prefHeight="37.0" prefWidth="190.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <TextField fx:id="txtRollNumber" alignment="BASELINE_LEFT" disable="true" layoutX="41.0" layoutY="198.0" prefHeight="37.0" prefWidth="141.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <TextField fx:id="txtPhoneNumber" alignment="BASELINE_LEFT" layoutX="41.0" layoutY="364.0" prefHeight="37.0" prefWidth="276.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="290.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/icon-man2.png" />
+                                    </image>
+                                </ImageView>
+                                <ChoiceBox fx:id="rangeOfProfDirection" layoutX="41.0" layoutY="268.0" prefHeight="37.0" prefWidth="238.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <Label layoutX="52.0" layoutY="39.0" text="First name" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="52.0" layoutY="109.0" text="Last name" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="52.0" layoutY="179.0" text="Roll №" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <ChoiceBox fx:id="rangeOfPosition" layoutX="222.0" layoutY="198.0" prefHeight="37.0" prefWidth="190.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <Label layoutX="233.0" layoutY="180.0" text="Position" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="52.0" layoutY="249.0" text="Professional direction" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="52.0" layoutY="342.0" text="Phone number" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtExperience" alignment="BASELINE_LEFT" layoutX="319.0" layoutY="268.0" prefHeight="37.0" prefWidth="93.0" style="-fx-background-color: #DFE3EC; -fx-background-radius: 4 4 4 4; -fx-border-color: #646C82; -fx-border-radius: 4 4 4 4;" />
+                                <Label layoutX="330.0" layoutY="249.0" text="Experience" textFill="#dfe3ec">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <Button fx:id="btnContinue" layoutX="560.0" layoutY="553.0" mnemonicParsing="false" onAction="#continueBtnOn" prefHeight="43.0" prefWidth="121.0" style="-fx-background-color: #5AAC6C; -fx-background-radius: 10 10 10 10; -fx-border-color: #6FB67F; -fx-border-width: 5; -fx-border-radius: 10 10 10 10;" text="Continue" textFill="#d9f1de">
+                            <font>
+                                <Font name="Arial Bold" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

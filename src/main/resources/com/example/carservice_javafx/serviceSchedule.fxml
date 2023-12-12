@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.carservice_javafx.ServiceSchduleController">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="231.0" style="-fx-background-color: #2F3B59;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/miniCar.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="120.0" layoutY="21.0" text="MENU" textFill="#ee3e3e">
+                    <font>
+                        <Font name="Arial Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="180.0" layoutX="25.0" layoutY="65.0" stroke="#71bbff" />
+                <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="20.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-creation.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="20.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-serviceSchedule_blue.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="20.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-employee.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="20.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/icon-HR.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnExit" layoutX="136.0" layoutY="622.0" mnemonicParsing="false" onAction="#exitBtnOn" prefHeight="43.0" prefWidth="108.0" style="-fx-background-color: #D34646; -fx-background-radius: 10 0 0 10; -fx-border-color: #EB6868; -fx-border-width: 5; -fx-border-radius: 10 0 0 10;" text="Exit" textFill="#f3e1e1">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ee3e3e" height="712.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="12.0" x="235.0" />
+            <Button fx:id="btnCreateClient" layoutX="60.0" layoutY="122.0" mnemonicParsing="false" onAction="#createClientBtnOn" style="-fx-background-color: #2F3B59;" text="Creating a new client" textFill="#d9d9d9" />
+            <Button fx:id="btnAddEmployee" layoutX="60.0" layoutY="222.0" mnemonicParsing="false" onAction="#addEmployeeBtnOn" style="-fx-background-color: #2F3B59;" text="Add a new employee" textFill="#d9d9d9" />
+            <Button fx:id="btnListOfEmployee" layoutX="60.0" layoutY="272.0" mnemonicParsing="false" onAction="#listOfEmployeeBtnOn" style="-fx-background-color: #2F3B59;" text="List of employee" textFill="#d9d9d9" />
+            <Button fx:id="btnServiceSchdl" layoutX="60.0" layoutY="172.0" mnemonicParsing="false" onAction="#serviceSchdlBtnOn" style="-fx-background-color: #2F3B59;" text="Service Schedule" textFill="#71bbff" />
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D9D9D9;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane layoutY="29.0" prefHeight="657.0" prefWidth="748.0" style="-fx-background-color: #B2B7C2; -fx-background-radius: 0 25 0 0;">
+                    <children>
+                        <TableView fx:id="tableServiceRecordLog" layoutX="18.0" layoutY="21.0" prefHeight="618.0" prefWidth="711.0">
+                            <columns>
+                                <TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />
+                                <TableColumn fx:id="colFirstName" prefWidth="100.0" text="First name" />
+                                <TableColumn fx:id="colLastName" prefWidth="100.0" text="Last name" />
+                                <TableColumn fx:id="colService" minWidth="0.0" prefWidth="115.0" text="Service" />
+                                <TableColumn fx:id="colBrand" prefWidth="95.0" text="Brand" />
+                                <TableColumn fx:id="colModel" prefWidth="93.56304931640625" text="Model" />
+                                <TableColumn fx:id="colPhoneNumber" prefWidth="110.84478759765625" text="Phone number" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
